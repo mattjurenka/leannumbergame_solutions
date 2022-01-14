@@ -1,0 +1,50 @@
+1
+induction n with d hd,
+rw add_zero,
+refl,
+rw add_succ,
+rw hd,
+refl,
+
+2
+induction c with d hd,
+rw add_zero,
+rw add_zero b,
+refl,
+rw add_succ,
+rw add_succ b,
+rw add_succ a,
+rw hd,
+refl,
+
+3
+induction b with d hd,
+rw add_zero,
+rw add_zero,
+refl,
+rw add_succ,
+rw add_succ,
+rw hd,
+refl,
+
+4
+induction a with d hd,
+rw add_zero,
+rw zero_add,
+refl,
+rw add_succ,
+rw succ_add,
+rw hd,
+refl,
+
+5
+rw one_eq_succ_zero,
+rw add_succ,
+rw add_zero,
+refl,
+
+6
+rw add_assoc,
+rw add_comm b c,
+rw ← add_assoc,
+refl,

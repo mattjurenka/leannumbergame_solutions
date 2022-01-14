@@ -1,0 +1,92 @@
+1
+split,
+exact p,
+exact q,
+
+2
+intro h,
+cases h with p q,
+split,
+exact q,
+exact p,
+
+3
+intro a,
+intro b,
+cases a with c d,
+cases b with e f,
+split,
+exact c,
+exact f,
+
+4
+intro h,
+cases h with hpq hqp,
+intro j,
+cases j with jqr jrq,
+split,
+intro p,
+exact jqr(hpq(p)),
+intro r,
+exact hqp(jrq(r)),
+
+5
+intros hpq hqr,
+split,
+intro p,
+apply hqr.1,
+apply hpq.1,
+exact p,
+intro r,
+exact hpq.2(hqr.2(r)),
+
+6
+intro q,
+right,
+exact q,
+
+7
+intro h,
+cases h with p q,
+right,
+exact p,
+left,
+exact q,
+
+8
+split,
+intro a,
+cases a with b c,
+cases c with d e,
+left,
+split,
+exact b,
+exact d,
+right,
+split,
+exact b,
+exact e,
+intro a,
+cases a with b c,
+cases b with d e,
+split,
+exact d,
+left,
+exact e,
+split,
+cases c with d e,
+exact d,
+cases c with d e,
+right,
+exact e,
+
+9
+rw not_iff_imp_false,
+intro a,
+cases a with b c,
+exfalso,
+exact c(b),
+
+10
+by_cases p : P; by_cases q : Q,
+repeat {cc},

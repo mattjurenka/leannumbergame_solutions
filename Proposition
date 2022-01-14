@@ -1,0 +1,44 @@
+1
+exact h(p),
+
+2
+intro p,
+exact p,
+
+3
+have q := h(p),
+have t := j(q),
+have u := l(t),
+exact u,
+
+4
+apply l,
+apply j,
+apply h,
+exact p,
+
+5
+intros p q,
+exact p,
+
+6
+intros f g p,
+apply f,
+exact p,
+exact g(p),
+
+7
+intros hpq hpr p,
+apply hpr,
+apply hpq,
+exact p,
+
+8
+repeat {rw not_iff_imp_false},
+intros f g p,
+apply g,
+apply f,
+exact p,
+
+9
+cc,

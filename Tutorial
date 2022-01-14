@@ -1,0 +1,15 @@
+1
+refl,
+
+2
+rw h,
+refl,
+
+3
+rw ← h,
+refl,
+
+4
+rw add_succ,
+rw add_zero,
+refl,

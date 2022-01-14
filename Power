@@ -1,0 +1,70 @@
+1
+rw pow_zero,
+refl,
+
+2
+induction m with d hd,
+rw pow_succ,
+rw mul_zero,
+refl,
+rw pow_succ,
+rw mul_zero,
+refl,
+
+3
+rw one_eq_succ_zero,
+rw pow_succ,
+rw pow_zero,
+rw one_mul,
+refl,
+
+4
+induction m with d hd,
+rw pow_zero,
+refl,
+rw pow_succ,
+rw mul_one,
+rw hd,
+refl,
+
+5
+induction m with d hd,
+rw zero_add,
+rw pow_zero,
+rw one_mul,
+refl,
+rw pow_succ,
+rw succ_add,
+rw pow_succ,
+rw hd,
+simp,
+
+6
+induction n with d hd,
+rwa [pow_zero, pow_zero, pow_zero, mul_one],
+rwa [pow_succ, pow_succ, pow_succ, hd],
+simp,
+
+7
+induction n with d hd,
+rwa [pow_zero, mul_zero, pow_zero],
+rwa [pow_succ, mul_succ, pow_add, hd],
+
+8
+rw two_eq_succ_one,
+rw one_eq_succ_zero,
+repeat {rw pow_succ},
+repeat {rw pow_zero},
+repeat {rw one_mul},
+
+--(a + b) * (a + b) = a*a + b*b + 2*a*b
+rw mul_add,
+rw add_mul,
+rw add_mul,
+rw ← add_assoc,
+rw mul_comm b a,
+rw succ_mul,
+rw ← one_eq_succ_zero,
+rw one_mul,
+rw add_mul,
+simp,

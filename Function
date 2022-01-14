@@ -1,0 +1,38 @@
+1
+exact h(p),
+
+2
+intro n,
+exact 3*n+1,
+
+3
+have q := h(p),
+have t := j(q),
+have u := l(t),
+exact u,
+
+4
+apply l,
+apply j,
+apply h,
+exact p,
+
+5
+intros p q,
+exact p,
+
+6
+intros f h p,
+exact f(p)(h(p)),
+
+7
+intros f g p,
+exact g(f(p)),
+
+8
+intros f h p,
+exact h(f(p)),
+
+9
+intro a,
+exact f15(f11(f9(f8(f5(f2(f1(a))))))),
